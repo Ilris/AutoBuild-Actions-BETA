@@ -32,6 +32,8 @@ on:
           - 'd-team_newifi-d2'
           - 'd-team_newifi-d2-Clash'
           - 'd-team_newifi-d2-Lite'
+          - 'd-team_newifi-d2-Lite-aliyundrive'
+          - 'd-team_newifi-d2-Lite-self'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
@@ -62,7 +64,7 @@ on:
 ### 环境变量设置
 env:
 # 编译时调用的 [.config] 文件名称
-  CONFIG_FILE: d-team_newifi-d2
+  CONFIG_FILE: d-team_newifi-d2-Lite-self
 # 源码仓库:分支
   DEFAULT_SOURCE: coolsnowwolf/lede:master
 # 删除无用文件以增加编译空间
@@ -76,7 +78,7 @@ env:
 
 jobs:
   Compile:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     permissions:
       issues: write
       pull-requests: write
