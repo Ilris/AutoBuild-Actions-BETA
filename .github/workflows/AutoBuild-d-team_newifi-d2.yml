@@ -26,12 +26,14 @@ on:
     inputs:
       Tempoary_CONFIG:
         description: '配置文件'
-        default: 'd-team_newifi-d2'
+        default: 'd-team_newifi-d2-Lite-self'
         type: choice
         options:
           - 'd-team_newifi-d2'
           - 'd-team_newifi-d2-Clash'
           - 'd-team_newifi-d2-Lite'
+          - 'd-team_newifi-d2-Lite-self'
+          - 'd-team_newifi-d2-Lite-aliyundrive'
       Tempoary_FLAG:
         description: '固件标签'
         default: 'AUTO'
@@ -43,7 +45,7 @@ on:
           - 'Lite'
       Tempoary_IP:
         description: '固件 IP 地址 [可选]'
-        default: ''
+        default: '192.168.2.1'
       UPLOAD_RELEASES:
         description: '上传固件到 Releases'
         default: 'true'
